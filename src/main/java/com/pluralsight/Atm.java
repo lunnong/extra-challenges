@@ -1,14 +1,18 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+import static com.pluralsight.Utils.promptInt;
+
 public class Atm {
     public static void main(String[] args) {
+        Scanner myScanner = new Scanner(System.in);
         int fifty = 50;
         int twenty = 20;
         int ten = 10;
         int five = 5;
         int one = 1;
         System.out.println("Welcome to the ATM");
-        int amount = 387;
+        int amount = promptInt(myScanner, "the amount to withdraw");
         System.out.println("You are withdrawing $" + amount);
 
         int numFifty = amount / fifty;
